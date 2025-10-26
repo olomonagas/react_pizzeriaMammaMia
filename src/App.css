@@ -1,0 +1,16 @@
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  background-image: url(./assets/Imagenes/Header/Header.jpg);
+  background-size: cover;
+  height: 250px;
+}
+
+
+
+
