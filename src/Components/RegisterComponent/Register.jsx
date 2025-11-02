@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import './Register.css'
 
 
 
@@ -16,7 +17,20 @@ function Register() {
         setError(true)
         return
     }
-    if(password === confirmPassword) {
+
+    if(password.length < 6) {
+      return 'La contraseña debe tener al menos 6 caracteres'
+    }
+
+    if(!/\d/.test(password)) {
+      return 'La contraseña debe contener al menos un número'
+    }
+
+    if(!/[A-Z]/.test(password)) {
+      return 'La contraseña debe contener al menos una letra mayúscula'
+    }
+
+    if(password !== confirmPassword) {
         setError(true)
         return
     }
@@ -27,8 +41,10 @@ function Register() {
   }
 
   return (
-    <>
-    <div>Formulario de Registro</div>
+    
+  <div className='registro'>
+    <div className="formularioRegistro">
+      <h1>Formulario de Registro</h1>
     <form className="formulario" onSubmit={validarDatos}>
         {error ? <p>Todos los campos son obligatorios</p> : null}
         <div className="form-group">
@@ -68,9 +84,11 @@ function Register() {
           Enviar
         </button>
       </form>
-      <h1>Datos ingresados</h1>
+      <h3 className='mensaje'></h3>
       {email} - {password} - {confirmPassword}
-    </>
+    </div>
+  </div>
+    
   )
 }
 
