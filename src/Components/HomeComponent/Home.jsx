@@ -8,6 +8,11 @@ console.log(TiposPizzas);
 
 export default function Home() {
   const [pizza, setPizza] = useState(TiposPizzas);
+  console.log(pizza)
+  const updatePizza = () => {
+    setPizza(TiposPizzas);
+  }
+  console.log(updatePizza)
 
   return (
     <>
