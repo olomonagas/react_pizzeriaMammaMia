@@ -11,13 +11,13 @@ function NavBar() {
   // const token = false;
   
   return (
-    <Navbar expand="lg" className="text-white bg-dark">
+    <Navbar expand="lg" className="text-white bg-dark navbar-light">
       <Container>
         <Navbar.Brand href="#home" className='text-white'>Pizzeria Mamma Mia</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className='text-white' />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className='text-white hamburger-white' />
+        <Navbar.Collapse id="basic-navbar-nav" className='text-white'>
           <Nav className="me-auto">
-            <div className='menu'>
+            {/* <div className='menu'> */}
             <div className="menuNavegacion">
             <Nav.Link href="#home" className='text-white'>
               <span>🍕</span>Home</Nav.Link>
@@ -34,7 +34,7 @@ function NavBar() {
               <Nav.Link href="#total" className='text-white'>
               <span>🛒</span>Total: $ {total.toLocaleString()}</Nav.Link>
               </div>
-              </div>
+              {/* </div> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

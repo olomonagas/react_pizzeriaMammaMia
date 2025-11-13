@@ -8,5 +8,16 @@
 .menuNavegacion {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 7px;
+    justify-content: start;
+}
+
+.totalcompra {
+    display: flex;
+    justify-content: end;
+
+}
+
+.hamburger-white .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
 }
