@@ -1,14 +1,11 @@
 import CardPizza from "../CardPizzaComponent/CardPizza";
 import Header from "../HeaderComponent/Header";
 import { TiposPizzas } from "../PizzaComponent/pizzas";
-import { useState } from "react";
 
 function Home() {
-  const [pizzas, setPizzas] = useState(TiposPizzas);
 
-  console.log("Hola Orlando");
-  console.log(pizzas);
-  console.log("Primera pizza:", pizzas[0]);
+const pizzas = TiposPizzas;
+
 
   return (
     <>

@@ -5,6 +5,7 @@ import Footer from './Components/FooterComponet/Footer';
 import Cart from './Components/CartComponent/Cart';
 import Header from './Components/HeaderComponent/Header';
 import Home from './Components/HomeComponent/Home';
+import Pizza from './Components/PizzaComponent/pizza';
 // import Register from './Components/RegisterComponent/Register';
 // import Login from './Components/LoginComponent/Login';
 
@@ -14,7 +15,8 @@ function App() {
   return (
     <>
     <NavBar />
-    <Home />
+    <Pizza />
+    {/* <Home /> */}
     {/* <Register /> */}
     {/* <Login /> */}
     {/* <Cart /> */}
