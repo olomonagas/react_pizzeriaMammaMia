@@ -1,8 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-// import { useState } from 'react';
-import { TiposPizzas } from '../PizzaComponent/pizzas';
 import ListGroup from "react-bootstrap/ListGroup";
+import { TiposPizzas } from '../../assets/sources/Pizzas';
 
 
 
@@ -21,7 +20,7 @@ function CardPizza({desc, id, img, ingredients, name, price}) {
         <h6 className="mt-2">Ingredientes:</h6>
         <ListGroup variant="flush" className="mb-3">
           {ingredients.map((ing, i) => (
-            <ListGroup.Item key={i} className="text-secondary text-capitalize">
+            <ListGroup.Item key={i} className="text-tertiary text-capitalize">
               🍕 {ing}
             </ListGroup.Item>
           ))}

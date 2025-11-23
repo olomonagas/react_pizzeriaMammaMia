@@ -1,7 +1,7 @@
-import CardPizza from "../CardPizzaComponent/CardPizza";
-import Header from "../HeaderComponent/Header";
-// import { TiposPizzas } from "../PizzaComponent/pizzas";
+import CardPizza from "../../components/cardPizzaComponent/CardPizza";
+import { TiposPizzas } from "../../assets/sources/Pizzas";
 import { useState, useEffect } from "react";
+import Header from "../../components/headerComponent/Header";
 
 
 function Home() {
@@ -19,7 +19,7 @@ function Home() {
   return (
     <>
       <Header />
-
+      
       <div className="d-flex flex-wrap justify-content-center mt-4">
         {pizzas.map((p) => (
           <CardPizza

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CardPizza from "../CardPizzaComponent/CardPizza";
+import CardPizza from "../../components/cardPizzaComponent/CardPizza";
 
 function Pizza() {
   const [pizza, setPizza] = useState(null);
@@ -14,7 +14,6 @@ function Pizza() {
           throw new Error("No se pudo obtener las pizzas");
         }
         const data = await response.json();
-        // Si tu API devuelve { pizzas: [...] }, entonces usa data.pizzas[0]
         setPizza(data[0] || data.pizzas?.[0]);
       } catch (err) {
         setError(err.message);

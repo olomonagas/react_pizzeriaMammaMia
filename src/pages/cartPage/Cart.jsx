@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ListGroup, Row, Col, Image, Button } from "react-bootstrap";
-import { pizzaCart } from "../PizzaComponent/pizzaCart";
+import { pizzaCart } from "../../assets/sources/pizzaCart";
 
 function Cart() {
   // Estado local del carrito

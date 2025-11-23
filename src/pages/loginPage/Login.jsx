@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import './../../assets/styles/Style.css'
 
 function Login() {
   
@@ -22,7 +23,9 @@ function Login() {
     
       return (
         <>
-        <div>Paguina de acceso</div>
+        <div className="loginPage">
+          <div className="informacionLogin">
+          <h1>Acceso a cuenta</h1>
         <form className="formulario" onSubmit={validarDatos}>
             {error ? <p>Todos los campos son obligatorios</p> : null}
             <div className="form-group">
@@ -53,8 +56,10 @@ function Login() {
               Enviar
             </button>
           </form>
-          <h1>Datos ingresados</h1>
+          <h3>Datos ingresados</h3>
           {email} - {password}
+          </div>
+          </div>
         </>
       )
     }
