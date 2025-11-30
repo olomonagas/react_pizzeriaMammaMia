@@ -1,6 +1,6 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route, Routes } from 'react-router';
+import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/navBarComponent/NavBar';
 import Home from './pages/homePage/Home';
 import Register from './pages/registerPage/Register';

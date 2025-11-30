@@ -1,17 +1,13 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from "react-bootstrap/ListGroup";
-import { TiposPizzas } from '../../assets/sources/Pizzas';
+import { useCart } from "../../hooks/useCart";
 
-
-
-function CardPizza({desc, id, img, ingredients, name, price}) {
-    
-  console.log(TiposPizzas);
-  console.log(id)
+function CardPizza({ desc, id, img, ingredients, name, price }) {
+  const { anadirPizza } = useCart();
 
   return (
-     <Card className="text-center shadow-sm" style={{ width: "18rem", margin: "10px" }}>
+    <Card className="text-center shadow-sm" style={{ width: "18rem", margin: "10px" }}>
       <Card.Img variant="top" src={img} alt={name} />
       <Card.Body>
         <Card.Title className="fw-bold text-capitalize">Pizza {name}</Card.Title>
@@ -26,15 +22,20 @@ function CardPizza({desc, id, img, ingredients, name, price}) {
           ))}
         </ListGroup>
 
-        <h5 className="fw-bold mb-3">Precio: ${price.toLocaleString('es-CL')}</h5>
+        <h5 className="fw-bold mb-3">Precio: ${price.toLocaleString("es-CL")}</h5>
 
         <div className="d-flex justify-content-around">
-          {/* <Button variant="outline-secondary" onClick={() => onView(id)}> */}
-            {/* Ver Más 👀 */}
-          {/* </Button> */}
-          {/* <Button variant="dark" onClick={() => onAdd(id)}> */}
-            {/* Añadir 🛒 */}
-          {/* </Button> */}
+          <Button variant="outline-secondary">
+            Ver Más 👀
+          </Button>
+
+          <Button
+            variant="dark"
+            onClick={() => anadirPizza({ id, img, name, price })}
+          >
+            Añadir 🛒
+          </Button>
+
         </div>
       </Card.Body>
     </Card>
@@ -42,3 +43,4 @@ function CardPizza({desc, id, img, ingredients, name, price}) {
 }
 
 export default CardPizza;
+

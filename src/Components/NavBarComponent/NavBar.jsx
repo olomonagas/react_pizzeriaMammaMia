@@ -1,69 +1,50 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-// import Link from 'react-router-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {  } from '@fortawesome/free-solid-svg-icons';
-import "./NavBar.css";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import React from "react";
+import { useCart } from "../../hooks/useCart";
 
 function NavBar() {
-  const total = 25000;
+  const { total } = useCart();
   const token = false;
 
   return (
-    <Navbar expand="lg" className="text-white bg-dark navbar-light">
+    <Navbar expand="lg" bg="dark" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand className="text-white">Pizzeria Mamma Mia</Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          className="text-white hamburger-white"
-        />
-        <Navbar.Collapse id="basic-navbar-nav" className="text-white">
-          <Nav className="w-100 justify-content-between">
-        <div className="menuNavegacion">
-              <Nav className="text-white align-items-center">
-                <span>🍕</span>
-                <Link to="/">Home</Link>
-              </Nav>
-              {/* Operador ternario para mostrar Profile o Register */}
-              {
-              token ? (
-                // Verdadero
-                <React.Fragment>
-                  <Nav className="text-white align-items-center">
-                    <span>🔓</span>
-                    <Link to="/Profile">Profile</Link>
-                  </Nav>
-                  <Nav className="text-white align-items-center">
-                    <span>🔓</span>
-                    <Link to="/Logout">Logout</Link>
-                  </Nav>
-                </React.Fragment>
-                )
-               :
-                <React.Fragment>
-                  <Nav className="text-white align-items-center">
-                    <span>🔐</span>
-                    <Link to="/Login">Login</Link>
-                  </Nav>
+        <Navbar.Brand>Pizzeria Mamma Mia</Navbar.Brand>
 
-                  <Nav className="text-white align-items-center">
-                    <span>🔐</span>
-                    <Link to="/Register">Register</Link>
-                  </Nav>
-                </React.Fragment>
-              }
-            </div>
-            <div className="totalcompra">
-              <Nav className="text-white align-items-center">
-                <span>🛒</span>
-                <Link to="/Cart">Total: $ {total.toLocaleString()}</Link>
-              </Nav>
-            </div>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+
+            {/* Menú izquierdo */}
+            <Nav.Link as={Link} to="/">
+              🍕 Home
+            </Nav.Link>
+
+            {token ? (
+              <>
+                <Nav.Link as={Link} to="/Profile">🔓 Profile</Nav.Link>
+                <Nav.Link as={Link} to="/Logout">🔓 Logout</Nav.Link>
+              </>
+            ) : (
+              <>
+                <Nav.Link as={Link} to="/Login">🔐 Login</Nav.Link>
+                <Nav.Link as={Link} to="/Register">🔐 Register</Nav.Link>
+              </>
+            )}
+
           </Nav>
+
+          {/* Menú derecho */}
+          <Nav>
+            <Nav.Link as={Link} to="/Cart">
+              🛒 Total: $ {total.toLocaleString()}
+            </Nav.Link>
+          </Nav>
+
         </Navbar.Collapse>
       </Container>
     </Navbar>
@@ -71,3 +52,4 @@ function NavBar() {
 }
 
 export default NavBar;
+

@@ -8,8 +8,6 @@ const Profile = () => {
         {/* <div className="formularioProfile"> */}
           <h1>Perfil de usuario</h1>
 
-          <h4>Nombre:</h4>
-          <span>Orlando Monagas</span>
           <h4>Email:</h4>
           <span>orlando.monagas@example.com</span>
         {/* </div> */}
