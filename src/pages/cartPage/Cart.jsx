@@ -1,9 +1,11 @@
-import { useCart } from "../../hooks/useCart";
+import { useCart } from "../../context/useCart";
 import { ListGroup, Row, Col, Image, Button } from "react-bootstrap";
+import { useUser } from "../../context/useUser";
+
 
 function Cart() {
   const { carrito, total, incrementar, decrementar } = useCart();
-
+   const { token } = useUser();
   return (
     <div className="p-3 bg-light rounded shadow-sm" style={{ maxWidth: 400, margin: "auto" }}>
       <h5 className="mb-3 fw-bold">Detalles del pedido:</h5>
@@ -41,7 +43,7 @@ function Cart() {
       <hr />
       <h5 className="fw-bold">Total: ${total.toLocaleString("es-CL")}</h5>
 
-      <Button variant="dark" className="mt-2 w-100">
+      <Button variant="dark" className="mt-2 w-100" disabled={!token}>
         Pagar
       </Button>
     </div>

@@ -8,8 +8,10 @@ import Login from './pages/loginPage/Login';
 import Profile from './pages/profilePage/Profile';
 import Cart from './pages/cartPage/Cart';
 import Footer from './components/footerComponent/Footer';
-import Pizza from './pages/pizzaPage/pizza';
+import Pizza from './pages/pizzaPage/Pizza';
 import NotFound from './pages/notFoundPage/NotFound';
+import ProtecRoute from './components/protecRouteComponent/ProtecRoute'
+import UserLog from './components/userLogComponent/UserLog';
 
 
 function App() {
@@ -19,11 +21,11 @@ function App() {
     <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/profile' element={<Profile />} />
+        <Route path='/register' element={<UserLog><Register /></UserLog>} />
+        <Route path='/login' element={<UserLog><Login /></UserLog>} />
+        <Route path='/profile' element={<ProtecRoute><Profile /></ProtecRoute>} />
         <Route path='/cart' element={<Cart />} />
-        <Route path='/pizza/001' element={<Pizza />} />
+        <Route path="/pizza/:id" element={<Pizza />} />
         <Route path='/404' element={<NotFound />} />
         <Route path='*' element={<NotFound />} />
       </Routes>

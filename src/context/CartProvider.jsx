@@ -1,6 +1,6 @@
 //ruta del archivo: src/context/CartProvider.jsx
 import React, { useState } from "react";
-import { CartContext } from "./pizzaContex";
+import { CartContext } from "./cartContext";
 
 export function CartProvider({ children }) {
   const [carrito, setCarrito] = useState([]);

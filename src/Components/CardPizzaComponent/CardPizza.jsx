@@ -1,7 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from "react-bootstrap/ListGroup";
-import { useCart } from "../../hooks/useCart";
+import { useCart } from "../../context/useCart";
+import { Link } from "react-router-dom";
+
 
 function CardPizza({ desc, id, img, ingredients, name, price }) {
   const { anadirPizza } = useCart();
@@ -25,10 +27,13 @@ function CardPizza({ desc, id, img, ingredients, name, price }) {
         <h5 className="fw-bold mb-3">Precio: ${price.toLocaleString("es-CL")}</h5>
 
         <div className="d-flex justify-content-around">
-          <Button variant="outline-secondary">
-            Ver Más 👀
-          </Button>
 
+          {/* Este botón te redirige a la página pizza.jsx y lee la descripcion con el id de la pizza */}
+          <Link to={`/pizza/${id}`} className="btn btn-outline-secondary">
+            Ver Más 👀
+          </Link>
+
+          {/* Este boton añade la pizza al carrito */}
           <Button
             variant="dark"
             onClick={() => anadirPizza({ id, img, name, price })}

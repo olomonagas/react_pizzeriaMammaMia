@@ -1,4 +1,4 @@
-// ruta del archivo: src/context/pizzaContext.js
+// src/context/cartContext.js
 import { createContext } from "react";
 
 export const CartContext = createContext(null);
