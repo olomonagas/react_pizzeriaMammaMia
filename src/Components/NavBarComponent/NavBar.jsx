@@ -1,8 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React from "react";
 import { useCart } from "../../context/useCart";
 import { useUser } from "../../context/useUser";
@@ -24,9 +23,8 @@ function NavBar() {
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          
+
           <Nav className="me-auto">
-            
             <Nav.Link as={Link} to="/">🍕 Home</Nav.Link>
 
             {token ? (
@@ -40,7 +38,6 @@ function NavBar() {
                 <Nav.Link as={Link} to="/register">🔐 Register</Nav.Link>
               </>
             )}
-
           </Nav>
 
           <Nav>

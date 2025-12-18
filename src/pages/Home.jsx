@@ -1,7 +1,7 @@
-import CardPizza from "../../components/cardPizzaComponent/CardPizza";
+import CardPizza from "../components/cardPizzaComponent/CardPizza";
 // import { TiposPizzas } from "../../assets/sources/Pizzas";
 import { useState, useEffect } from "react";
-import Header from "../../components/headerComponent/Header";
+import Header from "../components/headerComponent/Header";
 
 
 function Home() {

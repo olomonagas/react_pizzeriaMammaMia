@@ -4,7 +4,6 @@ import ListGroup from "react-bootstrap/ListGroup";
 import { useCart } from "../../context/useCart";
 import { Link } from "react-router-dom";
 
-
 function CardPizza({ desc, id, img, ingredients, name, price }) {
   const { anadirPizza } = useCart();
 

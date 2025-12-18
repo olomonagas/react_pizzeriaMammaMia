@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     background-color: rgb(149, 245, 213);
 }
@@ -16,7 +16,7 @@
     justify-content: center;
     margin-top: 20px;
     width: 50%;
-    height: 80%;
+    height: 70%;
     border: 2px solid #0a0707;
     border-radius: 10px;
     background-color: #ffffff;
@@ -31,7 +31,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     background-color: rgb(149, 245, 171);
 }
@@ -43,7 +43,7 @@
     justify-content: center;
     margin-top: 20px;
     width: 50%;
-    height: 80%;
+    height: 70%;
     border: 2px solid #0a0707;
     border-radius: 10px;
     background-color: #ffffff;
@@ -58,7 +58,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     background-color: rgb(241, 247, 143);
 }
@@ -70,11 +70,20 @@
     justify-content: center;
     margin-top: 20px;
     width: 50%;
-    height: 80%;
+    height: 70%;
     border: 2px solid #0a0707;
     border-radius: 10px;
     background-color: #ffffff;
     gap: 20px;
+}
+
+.cerrarSesion {
+    padding: 10px 20px;
+    background-color: #1317f7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Estilos para la pagina de notFound */
@@ -84,7 +93,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     background-color: rgb(246, 128, 128);
 }
@@ -96,7 +105,7 @@
     justify-content: center;
     margin-top: 20px;
     width: 50%;
-    height: 50%;
+    height: 60%;
     border: 2px solid #0a0707;
     border-radius: 10px;
     background-color: #ffffff;

@@ -1,18 +1,17 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
-import NavBar from './components/navBarComponent/NavBar';
-import Home from './pages/homePage/Home';
-import Register from './pages/registerPage/Register';
-import Login from './pages/loginPage/Login';
-import Profile from './pages/profilePage/Profile';
-import Cart from './pages/cartPage/Cart';
+import NavBar from './Components/navBarComponent/NavBar';
+import Home from './pages/Home';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import Profile from './pages/Profile';
+import Cart from './pages/Cart';
 import Footer from './components/footerComponent/Footer';
-import Pizza from './pages/pizzaPage/Pizza';
-import NotFound from './pages/notFoundPage/NotFound';
+import Pizza from './pages/Pizza';
+import NotFound from './pages/NotFound';
 import ProtecRoute from './components/protecRouteComponent/ProtecRoute'
 import UserLog from './components/userLogComponent/UserLog';
-
 
 function App() {
 
@@ -35,4 +34,3 @@ function App() {
 }
 
 export default App
-
